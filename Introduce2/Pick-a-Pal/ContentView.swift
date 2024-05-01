@@ -20,20 +20,21 @@ struct ContentView: View {
     
     @State private var nameToAdd = ""
     //@State private var pickedName = ""
-    @State private var shouldRemovePickedName = false
+    //@State private var shouldRemovePickedName = false
     @State private var check: [Bool] = []
     var body: some View {
         VStack {
             VStack(spacing: 8) {
                 Image(systemName: "person.3.sequence.fill")
                     .foregroundStyle(.tint)
-                    .symbolRenderingMode(.hierarchical)
+                     .symbolRenderingMode(.hierarchical)
                 Text("To-Do-List")
             }
             
             TextField("タスクを入力", text: $nameToAdd)
                 .autocorrectionDisabled()
                 .textFieldStyle(.roundedBorder)
+                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                 .onSubmit {
                     if !nameToAdd.isEmpty {
                         names.append(ToDoList(isCheck: false, Tasks: nameToAdd))
@@ -47,7 +48,8 @@ struct ContentView: View {
 //                .foregroundStyle(.tint)
             
             List {
-                ForEach(names.indices, id: \.self) { index in
+                ForEach(names.indices, id: \.self) {index in
+                    //1...5
                    HStack{
                        Image(systemName: names[index].isCheck ? "checkmark.circle.fill" : "circle")
                        Button( action: {
