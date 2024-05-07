@@ -8,27 +8,37 @@
 import SwiftUI
 
 struct ToDoList:Codable {
-var isCheck:Bool
-var Tasks:String
-}
-
+    var isCheck:Bool
+    var Tasks:String
+ }
 
 struct ContentView: View {
     //@State private var names: [String] = ["Elisha", "Andre", "Jasmine", "Po-Chan"]
     @State private var names: [ToDoList] = []
-    
-    
     @State private var nameToAdd = ""
     //@State private var pickedName = ""
     //@State private var shouldRemovePickedName = false
-    @State private var check: [Bool] = []
+    //@State private var check: [Bool] = []
+    
+    
     var body: some View {
         VStack {
             VStack(spacing: 8) {
                 Image(systemName: "person.3.sequence.fill")
                     .foregroundStyle(.tint)
-                     .symbolRenderingMode(.hierarchical)
-                Text("To-Do-List")
+                    .symbolRenderingMode(.hierarchical)
+                HStack{
+                    Text("To-Do-List")
+                        .font(.title)
+                    Button( action: {
+                        names.removeAll()
+                    },
+                            label: {
+                        Text("削除")
+                            .font(.title3)
+                    })
+                    .buttonStyle(.borderedProminent)
+                }
             }
             
             TextField("タスクを入力", text: $nameToAdd)
@@ -42,31 +52,41 @@ struct ContentView: View {
                     }
                 }
             
-//            Text(pickedName.isEmpty ? " " : pickedName)
-//                .font(.title2)
-//                .bold()
-//                .foregroundStyle(.tint)
+            //            Text(pickedName.isEmpty ? " " : pickedName)
+            //                .font(.title2)
+            //                .bold()
+            //                .foregroundStyle(.tint)
             
             List {
                 ForEach(names.indices, id: \.self) {index in
                     //1...5
-                   HStack{
-                       Image(systemName: names[index].isCheck ? "checkmark.circle.fill" : "circle")
-                       Button( action: {
-                           names[index].isCheck.toggle()
-                       },
-                   label: {
-                       Text(names[index].Tasks)
-                               .foregroundColor(.black)
-                       })
-                           
-                   }
+                    HStack{
+                        Image(systemName: names[index].isCheck ? "checkmark.circle.fill" : "circle")
+                        Button( action: {
+                            names[index].isCheck.toggle()
+                        },
+                                label: {
+                            if names[index].isCheck {
+                                Text(names[index].Tasks)
+                                    .foregroundColor(.black)
+                                    .strikethrough()
+                            } else {
+                                Text(names[index].Tasks)
+                                    .foregroundColor(.black)
+                            }
+                        })
+                        
+                    }
                 }
-           }
-           .clipShape(RoundedRectangle(cornerRadius: 8))
-            
-            
-            
+                .onMove(perform: move)
+                .onDelete(perform: {index in
+                    self.names.remove(atOffsets: index)
+                })
+                .deleteDisabled(true)
+            }
+            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .environment(\.editMode, .constant(.active))
+            //EditButton()
             
             //Toggle("Remove picked Name", isOn: $shouldRemovePickedName)
             
@@ -92,8 +112,14 @@ struct ContentView: View {
         }
         .padding()
     }
+    private func move(from source: IndexSet, to destination: Int) {
+        names.move(fromOffsets: source, toOffset: destination)
+    }
 }
 
 #Preview {
     ContentView()
 }
+
+
+
