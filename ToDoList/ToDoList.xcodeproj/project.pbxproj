@@ -7,61 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D7D41BC12BDE168F00258885 /* Pick_a_PalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D41BC02BDE168F00258885 /* Pick_a_PalApp.swift */; };
-		D7D41BC32BDE168F00258885 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D41BC22BDE168F00258885 /* ContentView.swift */; };
-		D7D41BC52BDE169200258885 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7D41BC42BDE169200258885 /* Assets.xcassets */; };
-		D7D41BC82BDE169200258885 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7D41BC72BDE169200258885 /* Preview Assets.xcassets */; };
-		D7D41BD22BDE169200258885 /* Pick_a_PalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D41BD12BDE169200258885 /* Pick_a_PalTests.swift */; };
-		D7D41BDC2BDE169200258885 /* Pick_a_PalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D41BDB2BDE169200258885 /* Pick_a_PalUITests.swift */; };
-		D7D41BDE2BDE169200258885 /* Pick_a_PalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D41BDD2BDE169200258885 /* Pick_a_PalUITestsLaunchTests.swift */; };
+		D75EF66B2BEA75A7004C8F72 /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75EF66A2BEA75A7004C8F72 /* ToDoListApp.swift */; };
+		D75EF66D2BEA75A7004C8F72 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75EF66C2BEA75A7004C8F72 /* ContentView.swift */; };
+		D75EF66F2BEA75A8004C8F72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75EF66E2BEA75A8004C8F72 /* Assets.xcassets */; };
+		D75EF6722BEA75A8004C8F72 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75EF6712BEA75A8004C8F72 /* Preview Assets.xcassets */; };
+		D75EF67C2BEA75A8004C8F72 /* ToDoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75EF67B2BEA75A8004C8F72 /* ToDoListTests.swift */; };
+		D75EF6862BEA75A9004C8F72 /* ToDoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75EF6852BEA75A9004C8F72 /* ToDoListUITests.swift */; };
+		D75EF6882BEA75A9004C8F72 /* ToDoListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75EF6872BEA75A9004C8F72 /* ToDoListUITestsLaunchTests.swift */; };
+		D77A0A272BECD0F000AAC8FF /* mapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77A0A262BECD0F000AAC8FF /* mapView.swift */; };
+		D77A0A2D2BECDB1500AAC8FF /* todoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77A0A2C2BECDB1500AAC8FF /* todoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D7D41BCE2BDE169200258885 /* PBXContainerItemProxy */ = {
+		D75EF6782BEA75A8004C8F72 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D7D41BB52BDE168F00258885 /* Project object */;
+			containerPortal = D75EF65F2BEA75A7004C8F72 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D7D41BBC2BDE168F00258885;
-			remoteInfo = "Pick-a-Pal";
+			remoteGlobalIDString = D75EF6662BEA75A7004C8F72;
+			remoteInfo = ToDoList;
 		};
-		D7D41BD82BDE169200258885 /* PBXContainerItemProxy */ = {
+		D75EF6822BEA75A9004C8F72 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D7D41BB52BDE168F00258885 /* Project object */;
+			containerPortal = D75EF65F2BEA75A7004C8F72 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D7D41BBC2BDE168F00258885;
-			remoteInfo = "Pick-a-Pal";
+			remoteGlobalIDString = D75EF6662BEA75A7004C8F72;
+			remoteInfo = ToDoList;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D7D41BBD2BDE168F00258885 /* Pick-a-Pal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pick-a-Pal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7D41BC02BDE168F00258885 /* Pick_a_PalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pick_a_PalApp.swift; sourceTree = "<group>"; };
-		D7D41BC22BDE168F00258885 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D7D41BC42BDE169200258885 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D7D41BC72BDE169200258885 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D7D41BCD2BDE169200258885 /* Pick-a-PalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pick-a-PalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7D41BD12BDE169200258885 /* Pick_a_PalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pick_a_PalTests.swift; sourceTree = "<group>"; };
-		D7D41BD72BDE169200258885 /* Pick-a-PalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pick-a-PalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7D41BDB2BDE169200258885 /* Pick_a_PalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pick_a_PalUITests.swift; sourceTree = "<group>"; };
-		D7D41BDD2BDE169200258885 /* Pick_a_PalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pick_a_PalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D75EF6672BEA75A7004C8F72 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D75EF66A2BEA75A7004C8F72 /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
+		D75EF66C2BEA75A7004C8F72 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D75EF66E2BEA75A8004C8F72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D75EF6712BEA75A8004C8F72 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D75EF6772BEA75A8004C8F72 /* ToDoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D75EF67B2BEA75A8004C8F72 /* ToDoListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListTests.swift; sourceTree = "<group>"; };
+		D75EF6812BEA75A9004C8F72 /* ToDoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D75EF6852BEA75A9004C8F72 /* ToDoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListUITests.swift; sourceTree = "<group>"; };
+		D75EF6872BEA75A9004C8F72 /* ToDoListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D77A0A262BECD0F000AAC8FF /* mapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapView.swift; sourceTree = "<group>"; };
+		D77A0A2C2BECDB1500AAC8FF /* todoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D7D41BBA2BDE168F00258885 /* Frameworks */ = {
+		D75EF6642BEA75A7004C8F72 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D7D41BCA2BDE169200258885 /* Frameworks */ = {
+		D75EF6742BEA75A8004C8F72 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D7D41BD42BDE169200258885 /* Frameworks */ = {
+		D75EF67E2BEA75A9004C8F72 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -71,142 +75,144 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D7D41BB42BDE168F00258885 = {
+		D75EF65E2BEA75A7004C8F72 = {
 			isa = PBXGroup;
 			children = (
-				D7D41BBF2BDE168F00258885 /* Pick-a-Pal */,
-				D7D41BD02BDE169200258885 /* Pick-a-PalTests */,
-				D7D41BDA2BDE169200258885 /* Pick-a-PalUITests */,
-				D7D41BBE2BDE168F00258885 /* Products */,
+				D75EF6692BEA75A7004C8F72 /* ToDoList */,
+				D75EF67A2BEA75A8004C8F72 /* ToDoListTests */,
+				D75EF6842BEA75A9004C8F72 /* ToDoListUITests */,
+				D75EF6682BEA75A7004C8F72 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D7D41BBE2BDE168F00258885 /* Products */ = {
+		D75EF6682BEA75A7004C8F72 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D7D41BBD2BDE168F00258885 /* Pick-a-Pal.app */,
-				D7D41BCD2BDE169200258885 /* Pick-a-PalTests.xctest */,
-				D7D41BD72BDE169200258885 /* Pick-a-PalUITests.xctest */,
+				D75EF6672BEA75A7004C8F72 /* ToDoList.app */,
+				D75EF6772BEA75A8004C8F72 /* ToDoListTests.xctest */,
+				D75EF6812BEA75A9004C8F72 /* ToDoListUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D7D41BBF2BDE168F00258885 /* Pick-a-Pal */ = {
+		D75EF6692BEA75A7004C8F72 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
-				D7D41BC02BDE168F00258885 /* Pick_a_PalApp.swift */,
-				D7D41BC22BDE168F00258885 /* ContentView.swift */,
-				D7D41BC42BDE169200258885 /* Assets.xcassets */,
-				D7D41BC62BDE169200258885 /* Preview Content */,
+				D75EF66A2BEA75A7004C8F72 /* ToDoListApp.swift */,
+				D75EF66C2BEA75A7004C8F72 /* ContentView.swift */,
+				D77A0A2C2BECDB1500AAC8FF /* todoView.swift */,
+				D77A0A262BECD0F000AAC8FF /* mapView.swift */,
+				D75EF66E2BEA75A8004C8F72 /* Assets.xcassets */,
+				D75EF6702BEA75A8004C8F72 /* Preview Content */,
 			);
-			path = "Pick-a-Pal";
+			path = ToDoList;
 			sourceTree = "<group>";
 		};
-		D7D41BC62BDE169200258885 /* Preview Content */ = {
+		D75EF6702BEA75A8004C8F72 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				D7D41BC72BDE169200258885 /* Preview Assets.xcassets */,
+				D75EF6712BEA75A8004C8F72 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		D7D41BD02BDE169200258885 /* Pick-a-PalTests */ = {
+		D75EF67A2BEA75A8004C8F72 /* ToDoListTests */ = {
 			isa = PBXGroup;
 			children = (
-				D7D41BD12BDE169200258885 /* Pick_a_PalTests.swift */,
+				D75EF67B2BEA75A8004C8F72 /* ToDoListTests.swift */,
 			);
-			path = "Pick-a-PalTests";
+			path = ToDoListTests;
 			sourceTree = "<group>";
 		};
-		D7D41BDA2BDE169200258885 /* Pick-a-PalUITests */ = {
+		D75EF6842BEA75A9004C8F72 /* ToDoListUITests */ = {
 			isa = PBXGroup;
 			children = (
-				D7D41BDB2BDE169200258885 /* Pick_a_PalUITests.swift */,
-				D7D41BDD2BDE169200258885 /* Pick_a_PalUITestsLaunchTests.swift */,
+				D75EF6852BEA75A9004C8F72 /* ToDoListUITests.swift */,
+				D75EF6872BEA75A9004C8F72 /* ToDoListUITestsLaunchTests.swift */,
 			);
-			path = "Pick-a-PalUITests";
+			path = ToDoListUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D7D41BBC2BDE168F00258885 /* Pick-a-Pal */ = {
+		D75EF6662BEA75A7004C8F72 /* ToDoList */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D7D41BE12BDE169200258885 /* Build configuration list for PBXNativeTarget "Pick-a-Pal" */;
+			buildConfigurationList = D75EF68B2BEA75A9004C8F72 /* Build configuration list for PBXNativeTarget "ToDoList" */;
 			buildPhases = (
-				D7D41BB92BDE168F00258885 /* Sources */,
-				D7D41BBA2BDE168F00258885 /* Frameworks */,
-				D7D41BBB2BDE168F00258885 /* Resources */,
+				D75EF6632BEA75A7004C8F72 /* Sources */,
+				D75EF6642BEA75A7004C8F72 /* Frameworks */,
+				D75EF6652BEA75A7004C8F72 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pick-a-Pal";
-			productName = "Pick-a-Pal";
-			productReference = D7D41BBD2BDE168F00258885 /* Pick-a-Pal.app */;
+			name = ToDoList;
+			productName = ToDoList;
+			productReference = D75EF6672BEA75A7004C8F72 /* ToDoList.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D7D41BCC2BDE169200258885 /* Pick-a-PalTests */ = {
+		D75EF6762BEA75A8004C8F72 /* ToDoListTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D7D41BE42BDE169200258885 /* Build configuration list for PBXNativeTarget "Pick-a-PalTests" */;
+			buildConfigurationList = D75EF68E2BEA75A9004C8F72 /* Build configuration list for PBXNativeTarget "ToDoListTests" */;
 			buildPhases = (
-				D7D41BC92BDE169200258885 /* Sources */,
-				D7D41BCA2BDE169200258885 /* Frameworks */,
-				D7D41BCB2BDE169200258885 /* Resources */,
+				D75EF6732BEA75A8004C8F72 /* Sources */,
+				D75EF6742BEA75A8004C8F72 /* Frameworks */,
+				D75EF6752BEA75A8004C8F72 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D7D41BCF2BDE169200258885 /* PBXTargetDependency */,
+				D75EF6792BEA75A8004C8F72 /* PBXTargetDependency */,
 			);
-			name = "Pick-a-PalTests";
-			productName = "Pick-a-PalTests";
-			productReference = D7D41BCD2BDE169200258885 /* Pick-a-PalTests.xctest */;
+			name = ToDoListTests;
+			productName = ToDoListTests;
+			productReference = D75EF6772BEA75A8004C8F72 /* ToDoListTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D7D41BD62BDE169200258885 /* Pick-a-PalUITests */ = {
+		D75EF6802BEA75A9004C8F72 /* ToDoListUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D7D41BE72BDE169200258885 /* Build configuration list for PBXNativeTarget "Pick-a-PalUITests" */;
+			buildConfigurationList = D75EF6912BEA75A9004C8F72 /* Build configuration list for PBXNativeTarget "ToDoListUITests" */;
 			buildPhases = (
-				D7D41BD32BDE169200258885 /* Sources */,
-				D7D41BD42BDE169200258885 /* Frameworks */,
-				D7D41BD52BDE169200258885 /* Resources */,
+				D75EF67D2BEA75A9004C8F72 /* Sources */,
+				D75EF67E2BEA75A9004C8F72 /* Frameworks */,
+				D75EF67F2BEA75A9004C8F72 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D7D41BD92BDE169200258885 /* PBXTargetDependency */,
+				D75EF6832BEA75A9004C8F72 /* PBXTargetDependency */,
 			);
-			name = "Pick-a-PalUITests";
-			productName = "Pick-a-PalUITests";
-			productReference = D7D41BD72BDE169200258885 /* Pick-a-PalUITests.xctest */;
+			name = ToDoListUITests;
+			productName = ToDoListUITests;
+			productReference = D75EF6812BEA75A9004C8F72 /* ToDoListUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D7D41BB52BDE168F00258885 /* Project object */ = {
+		D75EF65F2BEA75A7004C8F72 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
-					D7D41BBC2BDE168F00258885 = {
+					D75EF6662BEA75A7004C8F72 = {
 						CreatedOnToolsVersion = 15.3;
 					};
-					D7D41BCC2BDE169200258885 = {
+					D75EF6762BEA75A8004C8F72 = {
 						CreatedOnToolsVersion = 15.3;
-						TestTargetID = D7D41BBC2BDE168F00258885;
+						TestTargetID = D75EF6662BEA75A7004C8F72;
 					};
-					D7D41BD62BDE169200258885 = {
+					D75EF6802BEA75A9004C8F72 = {
 						CreatedOnToolsVersion = 15.3;
-						TestTargetID = D7D41BBC2BDE168F00258885;
+						TestTargetID = D75EF6662BEA75A7004C8F72;
 					};
 				};
 			};
-			buildConfigurationList = D7D41BB82BDE168F00258885 /* Build configuration list for PBXProject "Pick-a-Pal" */;
+			buildConfigurationList = D75EF6622BEA75A7004C8F72 /* Build configuration list for PBXProject "ToDoList" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -214,36 +220,36 @@
 				en,
 				Base,
 			);
-			mainGroup = D7D41BB42BDE168F00258885;
-			productRefGroup = D7D41BBE2BDE168F00258885 /* Products */;
+			mainGroup = D75EF65E2BEA75A7004C8F72;
+			productRefGroup = D75EF6682BEA75A7004C8F72 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D7D41BBC2BDE168F00258885 /* Pick-a-Pal */,
-				D7D41BCC2BDE169200258885 /* Pick-a-PalTests */,
-				D7D41BD62BDE169200258885 /* Pick-a-PalUITests */,
+				D75EF6662BEA75A7004C8F72 /* ToDoList */,
+				D75EF6762BEA75A8004C8F72 /* ToDoListTests */,
+				D75EF6802BEA75A9004C8F72 /* ToDoListUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D7D41BBB2BDE168F00258885 /* Resources */ = {
+		D75EF6652BEA75A7004C8F72 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7D41BC82BDE169200258885 /* Preview Assets.xcassets in Resources */,
-				D7D41BC52BDE169200258885 /* Assets.xcassets in Resources */,
+				D75EF6722BEA75A8004C8F72 /* Preview Assets.xcassets in Resources */,
+				D75EF66F2BEA75A8004C8F72 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D7D41BCB2BDE169200258885 /* Resources */ = {
+		D75EF6752BEA75A8004C8F72 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D7D41BD52BDE169200258885 /* Resources */ = {
+		D75EF67F2BEA75A9004C8F72 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,49 +259,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D7D41BB92BDE168F00258885 /* Sources */ = {
+		D75EF6632BEA75A7004C8F72 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7D41BC32BDE168F00258885 /* ContentView.swift in Sources */,
-				D7D41BC12BDE168F00258885 /* Pick_a_PalApp.swift in Sources */,
+				D75EF66D2BEA75A7004C8F72 /* ContentView.swift in Sources */,
+				D75EF66B2BEA75A7004C8F72 /* ToDoListApp.swift in Sources */,
+				D77A0A2D2BECDB1500AAC8FF /* todoView.swift in Sources */,
+				D77A0A272BECD0F000AAC8FF /* mapView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D7D41BC92BDE169200258885 /* Sources */ = {
+		D75EF6732BEA75A8004C8F72 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7D41BD22BDE169200258885 /* Pick_a_PalTests.swift in Sources */,
+				D75EF67C2BEA75A8004C8F72 /* ToDoListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D7D41BD32BDE169200258885 /* Sources */ = {
+		D75EF67D2BEA75A9004C8F72 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7D41BDC2BDE169200258885 /* Pick_a_PalUITests.swift in Sources */,
-				D7D41BDE2BDE169200258885 /* Pick_a_PalUITestsLaunchTests.swift in Sources */,
+				D75EF6882BEA75A9004C8F72 /* ToDoListUITestsLaunchTests.swift in Sources */,
+				D75EF6862BEA75A9004C8F72 /* ToDoListUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D7D41BCF2BDE169200258885 /* PBXTargetDependency */ = {
+		D75EF6792BEA75A8004C8F72 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D7D41BBC2BDE168F00258885 /* Pick-a-Pal */;
-			targetProxy = D7D41BCE2BDE169200258885 /* PBXContainerItemProxy */;
+			target = D75EF6662BEA75A7004C8F72 /* ToDoList */;
+			targetProxy = D75EF6782BEA75A8004C8F72 /* PBXContainerItemProxy */;
 		};
-		D7D41BD92BDE169200258885 /* PBXTargetDependency */ = {
+		D75EF6832BEA75A9004C8F72 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D7D41BBC2BDE168F00258885 /* Pick-a-Pal */;
-			targetProxy = D7D41BD82BDE169200258885 /* PBXContainerItemProxy */;
+			target = D75EF6662BEA75A7004C8F72 /* ToDoList */;
+			targetProxy = D75EF6822BEA75A9004C8F72 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		D7D41BDF2BDE169200258885 /* Debug */ = {
+		D75EF6892BEA75A9004C8F72 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -358,7 +366,7 @@
 			};
 			name = Debug;
 		};
-		D7D41BE02BDE169200258885 /* Release */ = {
+		D75EF68A2BEA75A9004C8F72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -414,14 +422,14 @@
 			};
 			name = Release;
 		};
-		D7D41BE22BDE169200258885 /* Debug */ = {
+		D75EF68C2BEA75A9004C8F72 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Pick-a-Pal/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ToDoList/Preview Content\"";
 				DEVELOPMENT_TEAM = G9MASYG5CQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -435,7 +443,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.kyusan-u.Pick-a-Pal";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.kyusan-u.ToDoList";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -443,14 +451,14 @@
 			};
 			name = Debug;
 		};
-		D7D41BE32BDE169200258885 /* Release */ = {
+		D75EF68D2BEA75A9004C8F72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Pick-a-Pal/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ToDoList/Preview Content\"";
 				DEVELOPMENT_TEAM = G9MASYG5CQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -464,7 +472,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.kyusan-u.Pick-a-Pal";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.kyusan-u.ToDoList";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -472,7 +480,7 @@
 			};
 			name = Release;
 		};
-		D7D41BE52BDE169200258885 /* Debug */ = {
+		D75EF68F2BEA75A9004C8F72 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -483,16 +491,16 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.kyusan-u.Pick-a-PalTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.kyusan-u.ToDoListTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pick-a-Pal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pick-a-Pal";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToDoList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ToDoList";
 			};
 			name = Debug;
 		};
-		D7D41BE62BDE169200258885 /* Release */ = {
+		D75EF6902BEA75A9004C8F72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -503,16 +511,16 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.kyusan-u.Pick-a-PalTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.kyusan-u.ToDoListTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pick-a-Pal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pick-a-Pal";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToDoList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ToDoList";
 			};
 			name = Release;
 		};
-		D7D41BE82BDE169200258885 /* Debug */ = {
+		D75EF6922BEA75A9004C8F72 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -521,16 +529,16 @@
 				DEVELOPMENT_TEAM = G9MASYG5CQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.kyusan-u.Pick-a-PalUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.kyusan-u.ToDoListUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Pick-a-Pal";
+				TEST_TARGET_NAME = ToDoList;
 			};
 			name = Debug;
 		};
-		D7D41BE92BDE169200258885 /* Release */ = {
+		D75EF6932BEA75A9004C8F72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -539,55 +547,55 @@
 				DEVELOPMENT_TEAM = G9MASYG5CQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.kyusan-u.Pick-a-PalUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.kyusan-u.ToDoListUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "Pick-a-Pal";
+				TEST_TARGET_NAME = ToDoList;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D7D41BB82BDE168F00258885 /* Build configuration list for PBXProject "Pick-a-Pal" */ = {
+		D75EF6622BEA75A7004C8F72 /* Build configuration list for PBXProject "ToDoList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D7D41BDF2BDE169200258885 /* Debug */,
-				D7D41BE02BDE169200258885 /* Release */,
+				D75EF6892BEA75A9004C8F72 /* Debug */,
+				D75EF68A2BEA75A9004C8F72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D7D41BE12BDE169200258885 /* Build configuration list for PBXNativeTarget "Pick-a-Pal" */ = {
+		D75EF68B2BEA75A9004C8F72 /* Build configuration list for PBXNativeTarget "ToDoList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D7D41BE22BDE169200258885 /* Debug */,
-				D7D41BE32BDE169200258885 /* Release */,
+				D75EF68C2BEA75A9004C8F72 /* Debug */,
+				D75EF68D2BEA75A9004C8F72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D7D41BE42BDE169200258885 /* Build configuration list for PBXNativeTarget "Pick-a-PalTests" */ = {
+		D75EF68E2BEA75A9004C8F72 /* Build configuration list for PBXNativeTarget "ToDoListTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D7D41BE52BDE169200258885 /* Debug */,
-				D7D41BE62BDE169200258885 /* Release */,
+				D75EF68F2BEA75A9004C8F72 /* Debug */,
+				D75EF6902BEA75A9004C8F72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D7D41BE72BDE169200258885 /* Build configuration list for PBXNativeTarget "Pick-a-PalUITests" */ = {
+		D75EF6912BEA75A9004C8F72 /* Build configuration list for PBXNativeTarget "ToDoListUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D7D41BE82BDE169200258885 /* Debug */,
-				D7D41BE92BDE169200258885 /* Release */,
+				D75EF6922BEA75A9004C8F72 /* Debug */,
+				D75EF6932BEA75A9004C8F72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D7D41BB52BDE168F00258885 /* Project object */;
+	rootObject = D75EF65F2BEA75A7004C8F72 /* Project object */;
 }

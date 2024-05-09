@@ -1,14 +1,14 @@
 //
-//  Pick_a_PalApp.swift
-//  Pick-a-Pal
+//  ToDoListApp.swift
+//  ToDoList
 //
-//  Created by h.kento on 2024/04/28.
+//  Created by h.kento on 2024/05/07.
 //
 
 import SwiftUI
 
 @main
-struct Pick_a_Pal: App {
+struct ToDoListApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

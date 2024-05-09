@@ -1,8 +1,8 @@
 //
-//  ContentView.swift
-//  Pick-a-Pal
+//  todoView.swift
+//  ToDoList
 //
-//  Created by h.kento on 2024/04/28.
+//  Created by h.kento on 2024/05/09.
 //
 
 import SwiftUI
@@ -10,41 +10,46 @@ import SwiftUI
 struct ToDoList:Codable {
     var isCheck:Bool
     var Tasks:String
- }
+}
 
-struct ContentView: View {
-    //@State private var names: [String] = ["Elisha", "Andre", "Jasmine", "Po-Chan"]
+
+struct todoView: View {
     @State private var list: [ToDoList] = []
     @State private var nameToAdd = ""
-    //@State private var pickedName = ""
-    //@State private var shouldRemovePickedName = false
     @State private var check = [true,false]
     @State private var allCheck = false
-    
-    
+
     var body: some View {
         VStack {
             VStack(spacing: 8) {
-                Image(systemName: "person.3.sequence.fill")
-                    .foregroundStyle(.tint)
-                    .symbolRenderingMode(.hierarchical)
+                Image(systemName: "rectangle.and.pencil.and.ellipsis")
+                    .font(.title)
+                    .foregroundStyle(.pink)
+                   // .symbolRenderingMode(.hierarchical)
                 HStack{
                     Button(action: {
                         allCheck.toggle()
-                        check = list.map{_ in allCheck}
-                        print(check)
+                        list[0].isCheck = allCheck
+                        check = check.map{_ in allCheck}
                     },
                            label: {
-                    Image(systemName: allCheck ?
-                          "checkmark.circle.fill" : "circle")
-                    .font(.title)
-                })
-                    
-                    Text("To-Do-List")
+                        Image(systemName: allCheck ?
+                              "checkmark.circle.fill" : "circle")
                         .font(.title)
+                        .foregroundColor(.pink)
+                    })
+                    
+                    
+                    Text("ToDoList")
+                        .foregroundStyle(.pink)
+                        .font(.largeTitle)
+                        .bold()
+                        .italic()
+                        .underline()
                     Button( action: {
+                        list.removeAll(where: {_ in true})
                         //list.removeAll()
-                        UserDefaults.standard.setValue(self.list, forKey: "todolist")
+//                        UserDefaults.standard.setValue(self.list, forKey: "todolist")
                     },
                             label: {
                         Text("削除")
@@ -55,20 +60,22 @@ struct ContentView: View {
             }
             
             TextField("タスクを入力", text: $nameToAdd)
+                .overlay(
+                        RoundedRectangle(cornerSize: CGSize(width: 8.0, height: 8.0))
+                        .stroke(Color.pink, lineWidth: 4.0)
+                        .padding(-2.0)
+                )
                 .autocorrectionDisabled()
                 .textFieldStyle(.roundedBorder)
-                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                .frame(width: 300)
+                .foregroundColor(.pink
+                )
                 .onSubmit {
                     if !nameToAdd.isEmpty {
                         list.append(ToDoList(isCheck: false, Tasks: nameToAdd))
                         nameToAdd = ""
                     }
                 }
-            
-            //            Text(pickedName.isEmpty ? " " : pickedName)
-            //                .font(.title2)
-            //                .bold()
-            //                .foregroundStyle(.tint)
             
             List {
                 ForEach(list.indices, id: \.self) {index in
@@ -97,39 +104,18 @@ struct ContentView: View {
                 })
                 //.deleteDisabled(true)
             }
-            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .clipShape(RoundedRectangle(cornerRadius: 90))
+            .padding()
             //.environment(\.editMode, .constant(.active))
             EditButton()
-            
-            
-            //Toggle("Remove picked Name", isOn: $shouldRemovePickedName)
-            
-            //          Button {
-            //                if let randomName = names.randomElement(){
-            //                    pickedName = randomName
-            //
-            //                    if shouldRemovePickedName {
-            //                        names.removeAll { name in
-            //                            return (name == randomName)
-            //                        }
-            //                    }
-            //                } else {
-            //                    pickedName = ""
-            //                }
-            //            } label: {
-            //                Text("Pick Random Name")
-            //                    .padding(.vertical, 8)
-            //                    .padding(.horizontal, 16)
-            //            }
-            //            .buttonStyle(.borderedProminent)
-            //            .font(.title2)
         }
         .padding()
-        .onAppear(){
-            guard let defaultItem = UserDefaults.standard.array(forKey: "todolist") as? [ToDoList]
-            else {return}
-                 self.list = defaultItem
-        }
+        .background(Color.green)
+//        .onAppear(){
+//            guard let defaultItem = UserDefaults.standard.array(forKey: "todolist") as? [ToDoList]
+//            else {return}
+//            self.list = defaultItem
+//        }
     }
     private func move(from source: IndexSet, to destination: Int) {
         list.move(fromOffsets: source, toOffset: destination)
@@ -137,8 +123,6 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    todoView()
 }
-
-
 
