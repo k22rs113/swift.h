@@ -12,13 +12,11 @@ struct ToDoList:Codable {
     var Tasks:String
 }
 
-
 struct todoView: View {
     @State private var list: [ToDoList] = []
     @State private var nameToAdd = ""
-    @State private var check = [true,false]
     @State private var allCheck = false
-
+    
     var body: some View {
         VStack {
             VStack(spacing: 8) {
@@ -26,11 +24,14 @@ struct todoView: View {
                     .font(.title)
                     .foregroundStyle(.pink)
                    // .symbolRenderingMode(.hierarchical)
-                HStack{
+                HStack(spacing: 30){
                     Button(action: {
                         allCheck.toggle()
-                        list[0].isCheck = allCheck
-                        check = check.map{_ in allCheck}
+                        list = list.map { todo in
+                        var retodo = todo
+                            retodo.isCheck = allCheck
+                            return retodo
+                        }
                     },
                            label: {
                         Image(systemName: allCheck ?
@@ -47,15 +48,13 @@ struct todoView: View {
                         .italic()
                         .underline()
                     Button( action: {
-                        list.removeAll(where: {_ in true})
-                        //list.removeAll()
-//                        UserDefaults.standard.setValue(self.list, forKey: "todolist")
+                        list.removeAll(where: {$0.isCheck == true})
                     },
                             label: {
-                        Text("削除")
-                            .font(.title3)
+                        Image(systemName: "trash.circle")
+                            .font(.largeTitle)
                     })
-                    .buttonStyle(.borderedProminent)
+                    //.buttonStyle(.borderedProminent)
                 }
             }
             
@@ -74,6 +73,21 @@ struct todoView: View {
                     if !nameToAdd.isEmpty {
                         list.append(ToDoList(isCheck: false, Tasks: nameToAdd))
                         nameToAdd = ""
+                        func savelist(list: [ToDoList]) {
+                            let jsonEncoder = JSONEncoder()
+                            guard let data = try? jsonEncoder.encode(list) else {
+                                return
+                            }
+                            UserDefaults.standard.set(data, forKey: "todolist")
+                        }
+                        func loadlist() -> [ToDoList]? {
+                            let jsonDecoder = JSONDecoder()
+                            guard let data = UserDefaults.standard.data(forKey: "todolist"),
+                                  let list = try? jsonDecoder.decode([ToDoList].self, from: data) else {
+                                return nil
+                            }
+                            return list
+                        }
                     }
                 }
             
@@ -99,15 +113,15 @@ struct todoView: View {
                     }
                 }
                 .onMove(perform: move)
-                .onDelete(perform: {index in
-                    self.list.remove(atOffsets: index)
-                })
+//                .onDelete(perform: {index in
+//                    self.list.remove(atOffsets: index)
+//                })
                 //.deleteDisabled(true)
             }
             .clipShape(RoundedRectangle(cornerRadius: 90))
             .padding()
-            //.environment(\.editMode, .constant(.active))
-            EditButton()
+            .environment(\.editMode, .constant(.active))
+            //EditButton()
         }
         .padding()
         .background(Color.green)

@@ -15,15 +15,15 @@ struct ContentView: View {
         
         TabView(selection: $selection){
             
-            todoView()
+            mapView()
                 .tabItem{
-                    Label("todo", systemImage: "1.circle")
+                    Label("map", systemImage: "1.circle")
                 }
                 .tag(1)
             
-            mapView()
+            todoView()
                 .tabItem{
-                    Label("map", systemImage: "2.circle")
+                    Label("todo", systemImage: "2.circle")
                 }
                 .tag(2)
         }

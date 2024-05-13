@@ -48,6 +48,7 @@
 		D75EF6872BEA75A9004C8F72 /* ToDoListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D77A0A262BECD0F000AAC8FF /* mapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapView.swift; sourceTree = "<group>"; };
 		D77A0A2C2BECDB1500AAC8FF /* todoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoView.swift; sourceTree = "<group>"; };
+		D7AF48CD2BF0730D0054DE21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +99,7 @@
 		D75EF6692BEA75A7004C8F72 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				D7AF48CD2BF0730D0054DE21 /* Info.plist */,
 				D75EF66A2BEA75A7004C8F72 /* ToDoListApp.swift */,
 				D75EF66C2BEA75A7004C8F72 /* ContentView.swift */,
 				D77A0A2C2BECDB1500AAC8FF /* todoView.swift */,
@@ -433,6 +435,8 @@
 				DEVELOPMENT_TEAM = G9MASYG5CQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ToDoList/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "位置情報の使用許可";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -462,6 +466,8 @@
 				DEVELOPMENT_TEAM = G9MASYG5CQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ToDoList/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "位置情報の使用許可";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
