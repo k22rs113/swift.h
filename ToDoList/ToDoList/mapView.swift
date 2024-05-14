@@ -15,14 +15,15 @@ struct Place: Identifiable {
 }
 
 struct mapView: View {
+    //@State var posittion: MapCameraPosition = .automatic
     
     @State  var region = MKCoordinateRegion(
         center : CLLocationCoordinate2D(
             latitude: 33.67074628619078,  // 緯度
             longitude: 130.44462257951858 // 経度
         ),
-        latitudinalMeters: 1000.0, // 南北
-        longitudinalMeters: 1000.0 // 東西
+        latitudinalMeters: 750.0, // 南北
+        longitudinalMeters: 750.0 // 東西
     )
     
     var body: some View {
@@ -34,7 +35,36 @@ struct mapView: View {
                         latitude: 33.673826066305054,
                         longitude: 130.44072814286878
                     )
+                ),
+                //オアシス
+                Place(
+                    coordinate: CLLocationCoordinate2D(
+                        latitude: 33.66954866384091,
+                        longitude: 130.44529495832367
+                    )
+                ),
+                //クラブハウス
+                Place(
+                    coordinate: CLLocationCoordinate2D(
+                        latitude: 33.67115441064561,
+                        longitude: 130.4452513873343
+                    )
+                ),
+                //アルテリア
+                Place(
+                    coordinate: CLLocationCoordinate2D(
+                        latitude: 33.67123923509521,
+                        longitude: 130.4434838116456
+                    )
+                ),
+                //クオーレ
+                Place(
+                    coordinate: CLLocationCoordinate2D(
+                        latitude: 33.670386522232924,
+                        longitude: 130.44359914662658
+                    )
                 )
+                
             ],
             annotationContent: {item in
             MapMarker(coordinate: item.coordinate,

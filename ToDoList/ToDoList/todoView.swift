@@ -24,7 +24,7 @@ struct todoView: View {
                     .font(.title)
                     .foregroundStyle(.pink)
                    // .symbolRenderingMode(.hierarchical)
-                HStack(spacing: 30){
+                HStack(spacing: 40){
                     Button(action: {
                         allCheck.toggle()
                         list = list.map { todo in
@@ -49,6 +49,9 @@ struct todoView: View {
                         .underline()
                     Button( action: {
                         list.removeAll(where: {$0.isCheck == true})
+                        if allCheck == true {
+                            allCheck.toggle()
+                        }
                     },
                             label: {
                         Image(systemName: "trash.circle")
@@ -67,28 +70,13 @@ struct todoView: View {
                 .autocorrectionDisabled()
                 .textFieldStyle(.roundedBorder)
                 .frame(width: 300)
-                .foregroundColor(.pink
-                )
+                .foregroundColor(.pink)
                 .onSubmit {
                     if !nameToAdd.isEmpty {
                         list.append(ToDoList(isCheck: false, Tasks: nameToAdd))
                         nameToAdd = ""
-                        func savelist(list: [ToDoList]) {
-                            let jsonEncoder = JSONEncoder()
-                            guard let data = try? jsonEncoder.encode(list) else {
-                                return
-                            }
-                            UserDefaults.standard.set(data, forKey: "todolist")
-                        }
-                        func loadlist() -> [ToDoList]? {
-                            let jsonDecoder = JSONDecoder()
-                            guard let data = UserDefaults.standard.data(forKey: "todolist"),
-                                  let list = try? jsonDecoder.decode([ToDoList].self, from: data) else {
-                                return nil
-                            }
-                            return list
-                        }
                     }
+                    savelist(list: list)
                 }
             
             List {
@@ -125,6 +113,7 @@ struct todoView: View {
         }
         .padding()
         .background(Color.green)
+        var load_list = loadlist()
 //        .onAppear(){
 //            guard let defaultItem = UserDefaults.standard.array(forKey: "todolist") as? [ToDoList]
 //            else {return}
@@ -133,6 +122,22 @@ struct todoView: View {
     }
     private func move(from source: IndexSet, to destination: Int) {
         list.move(fromOffsets: source, toOffset: destination)
+    }
+    
+    func savelist(list: [ToDoList]) {
+        let jsonEncoder = JSONEncoder()
+        guard let data = try? jsonEncoder.encode(list) else {
+            return
+        }
+        UserDefaults.standard.set(data, forKey: "todolist")
+    }
+    func loadlist() -> [ToDoList]? {
+        let jsonDecoder = JSONDecoder()
+        guard let data = UserDefaults.standard.data(forKey: "todolist"),
+              let list = try? jsonDecoder.decode([ToDoList].self, from: data) else {
+            return nil
+        }
+        return list
     }
 }
 
