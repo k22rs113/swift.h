@@ -14,7 +14,9 @@ struct ToDoList:Codable {
 
 struct todoView: View {
     @State private var list: [ToDoList] = []
-    @State private var nameToAdd = ""
+//    @State private var list: [(isCheck: Bool, Tasks: String)] = []
+    
+    @State private var nameAdd = ""
     @State private var allCheck = false
     
     var body: some View {
@@ -22,27 +24,28 @@ struct todoView: View {
             VStack(spacing: 8) {
                 Image(systemName: "rectangle.and.pencil.and.ellipsis")
                     .font(.title)
-                    .foregroundStyle(.pink)
-                   // .symbolRenderingMode(.hierarchical)
-                HStack(spacing: 40){
+                    .foregroundStyle(.yellow)
+                // .symbolRenderingMode(.hierarchical)
+                HStack(spacing: 32){
                     Button(action: {
                         allCheck.toggle()
                         list = list.map { todo in
-                        var retodo = todo
-                            retodo.isCheck = allCheck
-                            return retodo
+                            var reTodo = todo
+                            reTodo.isCheck = allCheck
+                            return reTodo
                         }
+                     //   save()
                     },
                            label: {
                         Image(systemName: allCheck ?
                               "checkmark.circle.fill" : "circle")
                         .font(.title)
-                        .foregroundColor(.pink)
+                        .foregroundColor(.yellow)
                     })
                     
                     
                     Text("ToDoList")
-                        .foregroundStyle(.pink)
+                        .foregroundStyle(.yellow)
                         .font(.largeTitle)
                         .bold()
                         .italic()
@@ -52,96 +55,92 @@ struct todoView: View {
                         if allCheck == true {
                             allCheck.toggle()
                         }
+                       // save()
                     },
                             label: {
                         Image(systemName: "trash.circle")
                             .font(.largeTitle)
+                            .foregroundColor(.yellow)
                     })
                     //.buttonStyle(.borderedProminent)
                 }
             }
             
-            TextField("タスクを入力", text: $nameToAdd)
+            TextField("タスクを入力", text: $nameAdd)
                 .overlay(
-                        RoundedRectangle(cornerSize: CGSize(width: 8.0, height: 8.0))
-                        .stroke(Color.pink, lineWidth: 4.0)
+                    RoundedRectangle(cornerSize: CGSize(width: 8.0, height: 8.0))
+                        .stroke(Color.yellow, lineWidth: 6.0)
                         .padding(-2.0)
                 )
-                .autocorrectionDisabled()
+               // .autocorrectionDisabled()
                 .textFieldStyle(.roundedBorder)
-                .frame(width: 300)
-                .foregroundColor(.pink)
+                .frame(width: 256)
                 .onSubmit {
-                    if !nameToAdd.isEmpty {
-                        list.append(ToDoList(isCheck: false, Tasks: nameToAdd))
-                        nameToAdd = ""
+                    if !nameAdd.isEmpty {
+                        list.append(ToDoList(isCheck: false, Tasks: nameAdd))
+//                        list.append((isCheck: false, Tasks: nameAdd))
+                        nameAdd = ""
+                        
+                        allCheck = false
+                      //  save()
                     }
-                    savelist(list: list)
                 }
             
             List {
                 ForEach(list.indices, id: \.self) {index in
-                    //1...5
                     HStack{
                         Image(systemName: list[index].isCheck ? "checkmark.circle.fill" : "circle")
+                            .foregroundStyle(list[index].isCheck ? .green : .black)
                         Button( action: {
                             list[index].isCheck.toggle()
+                       //     save()
                         },
                                 label: {
                             if list[index].isCheck {
                                 Text(list[index].Tasks)
                                     .foregroundColor(.black)
-                                    .strikethrough()
+                                    .strikethrough(color:.green)
                             } else {
                                 Text(list[index].Tasks)
                                     .foregroundColor(.black)
                             }
                         })
-                        
                     }
                 }
                 .onMove(perform: move)
-//                .onDelete(perform: {index in
-//                    self.list.remove(atOffsets: index)
-//                })
                 //.deleteDisabled(true)
             }
             .clipShape(RoundedRectangle(cornerRadius: 90))
             .padding()
             .environment(\.editMode, .constant(.active))
-            //EditButton()
         }
         .padding()
-        .background(Color.green)
-        var load_list = loadlist()
+        .background(Color.black)
+        .onAppear(){
+            if let todosData = UserDefaults.standard.data(forKey: "TodoList_Key"),
+               let decodedTodos = try? JSONDecoder().decode([ToDoList].self, from: todosData) {
+                list = decodedTodos
+            }
+        }
 //        .onAppear(){
-//            guard let defaultItem = UserDefaults.standard.array(forKey: "todolist") as? [ToDoList]
-//            else {return}
-//            self.list = defaultItem
-//        }
-    }
-    private func move(from source: IndexSet, to destination: Int) {
-        list.move(fromOffsets: source, toOffset: destination)
+//                    guard let defaultItem = UserDefaults.standard.array(forKey: "todo") as? [Bool,String] else{return}
+//                         list = defaultItem
+//                }
+
     }
     
-    func savelist(list: [ToDoList]) {
-        let jsonEncoder = JSONEncoder()
-        guard let data = try? jsonEncoder.encode(list) else {
-            return
-        }
-        UserDefaults.standard.set(data, forKey: "todolist")
+    private func move(from source: IndexSet, to destination: Int) {
+        list.move(fromOffsets: source, toOffset: destination)
+        //save()
     }
-    func loadlist() -> [ToDoList]? {
-        let jsonDecoder = JSONDecoder()
-        guard let data = UserDefaults.standard.data(forKey: "todolist"),
-              let list = try? jsonDecoder.decode([ToDoList].self, from: data) else {
-            return nil
+    
+    private func save() {
+        if let jsonValue = try? JSONEncoder().encode(list)  {
+            UserDefaults.standard.set(jsonValue, forKey: "TodoList_Key")
         }
-        return list
     }
 }
 
 #Preview {
     todoView()
 }
-

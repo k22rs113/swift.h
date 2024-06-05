@@ -16,6 +16,9 @@
 		D75EF6882BEA75A9004C8F72 /* ToDoListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75EF6872BEA75A9004C8F72 /* ToDoListUITestsLaunchTests.swift */; };
 		D77A0A272BECD0F000AAC8FF /* mapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77A0A262BECD0F000AAC8FF /* mapView.swift */; };
 		D77A0A2D2BECDB1500AAC8FF /* todoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77A0A2C2BECDB1500AAC8FF /* todoView.swift */; };
+		D7A9BAAD2BFB134B00958A0C /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A9BAAC2BFB134B00958A0C /* json.swift */; };
+		D7ADE5802BFF6EC600CFBC9D /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7ADE57F2BFF6EC600CFBC9D /* test.swift */; };
+		D7AF973F2BFDEFD700D63DC7 /* Fortune.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AF973E2BFDEFD700D63DC7 /* Fortune.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +51,10 @@
 		D75EF6872BEA75A9004C8F72 /* ToDoListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D77A0A262BECD0F000AAC8FF /* mapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapView.swift; sourceTree = "<group>"; };
 		D77A0A2C2BECDB1500AAC8FF /* todoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoView.swift; sourceTree = "<group>"; };
+		D7A9BAAC2BFB134B00958A0C /* json.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
+		D7ADE57F2BFF6EC600CFBC9D /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		D7AF48CD2BF0730D0054DE21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D7AF973E2BFDEFD700D63DC7 /* Fortune.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fortune.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 				D75EF66A2BEA75A7004C8F72 /* ToDoListApp.swift */,
 				D75EF66C2BEA75A7004C8F72 /* ContentView.swift */,
 				D77A0A2C2BECDB1500AAC8FF /* todoView.swift */,
+				D7AF973E2BFDEFD700D63DC7 /* Fortune.swift */,
+				D7A9BAAC2BFB134B00958A0C /* json.swift */,
+				D7ADE57F2BFF6EC600CFBC9D /* test.swift */,
 				D77A0A262BECD0F000AAC8FF /* mapView.swift */,
 				D75EF66E2BEA75A8004C8F72 /* Assets.xcassets */,
 				D75EF6702BEA75A8004C8F72 /* Preview Content */,
@@ -267,8 +276,11 @@
 			files = (
 				D75EF66D2BEA75A7004C8F72 /* ContentView.swift in Sources */,
 				D75EF66B2BEA75A7004C8F72 /* ToDoListApp.swift in Sources */,
+				D7A9BAAD2BFB134B00958A0C /* json.swift in Sources */,
 				D77A0A2D2BECDB1500AAC8FF /* todoView.swift in Sources */,
 				D77A0A272BECD0F000AAC8FF /* mapView.swift in Sources */,
+				D7AF973F2BFDEFD700D63DC7 /* Fortune.swift in Sources */,
+				D7ADE5802BFF6EC600CFBC9D /* test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +369,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -414,7 +426,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -495,7 +507,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G9MASYG5CQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.kyusan-u.ToDoListTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -515,7 +527,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G9MASYG5CQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.kyusan-u.ToDoListTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";

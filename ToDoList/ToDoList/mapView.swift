@@ -10,24 +10,22 @@ import MapKit
 import SwiftUI
 
 struct Place: Identifiable {
-    let coordinate: CLLocationCoordinate2D
+    let coordinate: CLLocationCoordinate2D 
     let id = UUID()
 }
 
 struct mapView: View {
     //@State var posittion: MapCameraPosition = .automatic
-    
     @State  var region = MKCoordinateRegion(
         center : CLLocationCoordinate2D(
-            latitude: 33.67074628619078,  // 緯度
-            longitude: 130.44462257951858 // 経度
+            latitude: 33.67074628619078,
+            longitude: 130.44462257951858
         ),
-        latitudinalMeters: 750.0, // 南北
-        longitudinalMeters: 750.0 // 東西
+        latitudinalMeters: 750.0,
+        longitudinalMeters: 750.0
     )
     
     var body: some View {
-        // 地図を表示
         Map(coordinateRegion: $region,
             annotationItems: [
                 Place(

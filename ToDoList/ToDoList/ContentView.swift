@@ -26,6 +26,12 @@ struct ContentView: View {
                     Label("todo", systemImage: "2.circle")
                 }
                 .tag(2)
+            
+            Fortune()
+                .tabItem{
+                    Label("Fortune", systemImage: "3.circle")
+                }
+                .tag(3)
         }
         
     }
